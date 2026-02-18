@@ -8,7 +8,7 @@ import { projects, siteConfig } from '@/data/content'
 
 export function Projects() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const featured = projects.slice(0, 3)
 

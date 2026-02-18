@@ -6,7 +6,7 @@ import { stats, regions } from '@/data/content'
 
 export function Stats() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
     <section ref={ref} className="border-y border-neutral-200 bg-white">

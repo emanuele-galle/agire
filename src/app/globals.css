@@ -28,13 +28,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Marble/light effect background */
+/* Marble/light effect background - dramatic like layout */
 .bg-marble {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(200, 200, 200, 0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(180, 180, 180, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(220, 220, 220, 0.25) 0%, transparent 50%),
-    linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #ebebeb 100%);
+    radial-gradient(ellipse at 0% 0%, rgba(30, 30, 30, 0.6) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%, rgba(20, 20, 20, 0.5) 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 100%, rgba(40, 40, 40, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(30, 30, 30, 0.3) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(240, 240, 240, 0.8) 60%, transparent 80%),
+    linear-gradient(135deg, #1a1a1a 0%, #e0e0e0 30%, #ffffff 50%, #d8d8d8 70%, #111111 100%);
 }
 
 /* Dark marble variant */
@@ -46,7 +48,7 @@ body {
     linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
 }
 
-/* Light streak effects (like in layout) */
+/* Light streak effects (like in layout - diagonal light beams) */
 .light-streak {
   position: relative;
   overflow: hidden;
@@ -55,21 +57,32 @@ body {
 .light-streak::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg at 50% 50%,
-    transparent 0deg,
-    rgba(255, 255, 255, 0.03) 60deg,
-    transparent 120deg,
-    rgba(255, 255, 255, 0.05) 180deg,
-    transparent 240deg,
-    rgba(255, 255, 255, 0.02) 300deg,
-    transparent 360deg
-  );
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(125deg, transparent 20%, rgba(255, 255, 255, 0.15) 35%, rgba(255, 255, 255, 0.3) 38%, rgba(255, 255, 255, 0.15) 41%, transparent 55%),
+    linear-gradient(225deg, transparent 30%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.2) 52%, rgba(255, 255, 255, 0.08) 54%, transparent 70%),
+    linear-gradient(165deg, transparent 40%, rgba(255, 255, 255, 0.05) 60%, transparent 80%);
   pointer-events: none;
+  z-index: 1;
+}
+
+/* Bright sparkle points like layout */
+.light-streak::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 2%, transparent 5%),
+    radial-gradient(circle at 15% 85%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 2%, transparent 4%),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.4) 0%, transparent 3%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Subtle border style matching layout */

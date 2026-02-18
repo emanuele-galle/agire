@@ -8,7 +8,7 @@ import { services } from '@/data/content'
 
 export function Services() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   return (
     <section ref={ref} className="py-20 bg-white">

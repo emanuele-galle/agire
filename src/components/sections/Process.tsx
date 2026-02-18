@@ -7,7 +7,7 @@ import { processSteps } from '@/data/content'
 
 export function Process() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-50px' })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   return (
     <section ref={ref} className="py-20 bg-white border-t border-neutral-200">

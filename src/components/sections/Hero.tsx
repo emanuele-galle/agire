@@ -7,7 +7,7 @@ import { siteConfig } from '@/data/content'
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-marble light-streak overflow-hidden">
-      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center" style={{ zIndex: 2 }}>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
