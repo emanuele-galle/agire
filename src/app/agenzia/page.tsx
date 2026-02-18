@@ -6,7 +6,7 @@ import { team, siteConfig } from '@/data/content'
 
 function TeamMember({ member, index }: { member: typeof team[number]; index: number }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-50px' })
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
     <motion.div
@@ -16,7 +16,7 @@ function TeamMember({ member, index }: { member: typeof team[number]; index: num
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="text-center"
     >
-      <div className="w-32 h-32 mx-auto rounded-full bg-neutral-200 mb-4" />
+      <div className="w-32 h-32 mx-auto rounded-full bg-white/30 backdrop-blur-sm border border-black/10 mb-4" />
       <h3 className="text-lg font-semibold">{member.name}</h3>
       <p className="text-sm text-neutral-500 mt-1">{member.role}</p>
     </motion.div>
@@ -25,8 +25,8 @@ function TeamMember({ member, index }: { member: typeof team[number]; index: num
 
 export default function AgenziaPage() {
   return (
-    <div className="pt-20">
-      <section className="py-20 lg:py-28 bg-marble light-streak">
+    <div>
+      <section className="pt-8 pb-12 lg:pt-16 lg:pb-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -49,7 +49,7 @@ export default function AgenziaPage() {
       </section>
 
       {/* Approach */}
-      <section className="py-16 border-b border-neutral-200">
+      <section className="py-16 border-y border-black/10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {[
@@ -58,7 +58,7 @@ export default function AgenziaPage() {
               { title: 'Azione', desc: 'Eseguiamo con precisione, monitoriamo i risultati e ottimizziamo continuamente per massimizzare l\'impatto.' },
             ].map((item, i) => (
               <div key={item.title} className="text-center lg:text-left">
-                <div className="text-5xl font-bold text-neutral-100 mb-4">0{i + 1}</div>
+                <div className="text-5xl font-bold text-black/10 mb-4">0{i + 1}</div>
                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="text-neutral-500 leading-relaxed">{item.desc}</p>
               </div>

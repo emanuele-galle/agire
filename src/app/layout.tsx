@@ -24,9 +24,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="it" className={inter.variable}>
       <body className="font-sans antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <div className="bg-marble-page">
+          <div className="content-above">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   )

@@ -19,22 +19,22 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/60 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <nav className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-16 lg:h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-1.5">
             <div className="relative">
-              <span className="text-2xl font-bold tracking-tight">AGIRE</span>
-              <span className="absolute -top-1 -left-3 h-5 w-5 rounded-full border-2 border-current opacity-60" />
+              <span className="absolute -top-0.5 -left-4 h-5 w-5 rounded-full border-[1.5px] border-current opacity-50" />
+              <span className="text-xl font-bold tracking-tight">AGIRE</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -48,11 +48,11 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA + Mobile Toggle */}
+          {/* CTA + Mobile */}
           <div className="flex items-center gap-4">
             <Link
               href="/contatti"
-              className="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-medium bg-black text-white rounded-none hover:bg-neutral-800 transition-colors"
+              className="hidden md:inline-flex items-center px-5 py-2 text-sm font-medium bg-neutral-900 text-white hover:bg-black transition-colors"
             >
               Prenota una Call
             </Link>
@@ -68,7 +68,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileOpen && (
-          <div className="md:hidden border-t border-neutral-200 bg-white pb-6 pt-4">
+          <div className="md:hidden border-t border-black/10 bg-white/90 backdrop-blur-md pb-6 pt-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
@@ -91,6 +91,9 @@ export function Navbar() {
           </div>
         )}
       </nav>
+
+      {/* Separator line */}
+      <div className="border-b border-black/10" />
     </header>
   )
 }

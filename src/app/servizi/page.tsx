@@ -3,14 +3,14 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
 import { Palette, Camera, Share2, Link as LinkIcon, ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
 import { services } from '@/data/content'
 
 const iconMap = { Palette, Camera, Share2, Link: LinkIcon }
 
 function ServiceBlock({ service, index }: { service: typeof services[number]; index: number }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
   const Icon = iconMap[service.icon as keyof typeof iconMap]
 
   return (
@@ -19,29 +19,32 @@ function ServiceBlock({ service, index }: { service: typeof services[number]; in
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 ${index > 0 ? 'border-t border-neutral-200' : ''}`}
+      className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 ${index > 0 ? 'border-t border-black/10' : ''}`}
     >
       <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-        <div className="text-6xl font-bold text-neutral-100 mb-4">0{index + 1}</div>
+        <div className="text-6xl font-bold text-black/10 mb-4">0{index + 1}</div>
         <div className="flex items-center gap-3 mb-4">
           {Icon && <Icon size={24} className="text-neutral-600" />}
           <h2 className="text-2xl lg:text-3xl font-bold">{service.title}</h2>
         </div>
         <p className="text-neutral-500 leading-relaxed mb-6">{service.detail}</p>
-        <Button href="/contatti" variant="outline">
+        <Link
+          href="/contatti"
+          className="inline-flex items-center px-5 py-2.5 text-sm font-medium border border-black text-black hover:bg-black hover:text-white transition-colors"
+        >
           Richiedi Info <ArrowRight size={16} className="ml-2" />
-        </Button>
+        </Link>
       </div>
-      <div className={`aspect-[4/3] bg-neutral-100 ${index % 2 === 1 ? 'lg:order-1' : ''}`} />
+      <div className={`aspect-[4/3] bg-white/20 backdrop-blur-sm border border-black/10 ${index % 2 === 1 ? 'lg:order-1' : ''}`} />
     </motion.div>
   )
 }
 
 export default function ServiziPage() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero */}
-      <section className="py-20 lg:py-28 bg-marble light-streak">
+      <section className="pt-8 pb-12 lg:pt-16 lg:pb-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -70,13 +73,16 @@ export default function ServiziPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-black text-white text-center">
+      <section className="py-20 bg-black/80 backdrop-blur-sm text-white text-center mt-16">
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Pronto a far crescere il tuo brand?</h2>
           <p className="text-neutral-400 mb-8">Parliamo del tuo progetto e troviamo la soluzione giusta per te.</p>
-          <Button href="/contatti" className="bg-white text-black hover:bg-neutral-200">
+          <Link
+            href="/contatti"
+            className="inline-flex items-center px-8 py-3.5 text-sm font-medium bg-white text-black hover:bg-neutral-200 transition-colors"
+          >
             Prenota una Call
-          </Button>
+          </Link>
         </div>
       </section>
     </div>

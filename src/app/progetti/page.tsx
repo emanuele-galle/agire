@@ -6,7 +6,7 @@ import { projects, universities, bigCompanies } from '@/data/content'
 
 function ProjectCard({ project, index }: { project: typeof projects[number]; index: number }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-50px' })
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
     <motion.div
@@ -28,8 +28,8 @@ function ProjectCard({ project, index }: { project: typeof projects[number]; ind
 
 export default function ProgettiPage() {
   return (
-    <div className="pt-20">
-      <section className="py-20 lg:py-28 bg-marble light-streak">
+    <div>
+      <section className="pt-8 pb-12 lg:pt-16 lg:pb-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -50,7 +50,7 @@ export default function ProgettiPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-6">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project, i) => (
@@ -61,14 +61,14 @@ export default function ProgettiPage() {
       </section>
 
       {/* Collaborations */}
-      <section className="py-16 border-t border-neutral-200">
+      <section className="py-16 border-t border-black/10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-400 mb-6">Università Partner</h3>
               <div className="flex flex-wrap gap-3">
                 {universities.map((uni) => (
-                  <span key={uni} className="px-4 py-2 border border-neutral-200 text-sm">{uni}</span>
+                  <span key={uni} className="px-4 py-2 border border-black/15 bg-white/30 backdrop-blur-sm text-sm">{uni}</span>
                 ))}
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function ProgettiPage() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-400 mb-6">Big Company</h3>
               <div className="flex flex-wrap gap-3">
                 {bigCompanies.map((company) => (
-                  <span key={company} className="px-4 py-2 border border-neutral-200 text-sm">{company}</span>
+                  <span key={company} className="px-4 py-2 border border-black/15 bg-white/30 backdrop-blur-sm text-sm">{company}</span>
                 ))}
               </div>
             </div>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'motion/react'
-import { Mail, Phone, MapPin, Instagram, Send } from 'lucide-react'
+import { Mail, MapPin, Instagram, Send } from 'lucide-react'
 import { siteConfig } from '@/data/content'
 
 export default function ContattiPage() {
@@ -14,8 +14,8 @@ export default function ContattiPage() {
   }
 
   return (
-    <div className="pt-20">
-      <section className="py-20 lg:py-28 bg-marble light-streak">
+    <div>
+      <section className="pt-8 pb-12 lg:pt-16 lg:pb-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -36,7 +36,7 @@ export default function ContattiPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-6">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Form */}
@@ -44,10 +44,11 @@ export default function ContattiPage() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white/30 backdrop-blur-sm border border-black/10 p-8"
             >
               {submitted ? (
                 <div className="text-center py-12">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-neutral-100 flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-white/50 flex items-center justify-center mb-4">
                     <Send size={24} className="text-neutral-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Messaggio Inviato</h3>
@@ -61,7 +62,7 @@ export default function ContattiPage() {
                       id="name"
                       type="text"
                       required
-                      className="w-full border border-neutral-300 px-4 py-3 text-sm focus:border-black focus:outline-none transition-colors"
+                      className="w-full border border-black/15 bg-white/50 px-4 py-3 text-sm focus:border-black focus:outline-none transition-colors"
                       placeholder="Il tuo nome"
                     />
                   </div>
@@ -71,7 +72,7 @@ export default function ContattiPage() {
                       id="email"
                       type="email"
                       required
-                      className="w-full border border-neutral-300 px-4 py-3 text-sm focus:border-black focus:outline-none transition-colors"
+                      className="w-full border border-black/15 bg-white/50 px-4 py-3 text-sm focus:border-black focus:outline-none transition-colors"
                       placeholder="La tua email"
                     />
                   </div>
@@ -80,7 +81,7 @@ export default function ContattiPage() {
                     <input
                       id="phone"
                       type="tel"
-                      className="w-full border border-neutral-300 px-4 py-3 text-sm focus:border-black focus:outline-none transition-colors"
+                      className="w-full border border-black/15 bg-white/50 px-4 py-3 text-sm focus:border-black focus:outline-none transition-colors"
                       placeholder="Il tuo numero (opzionale)"
                     />
                   </div>
@@ -90,7 +91,7 @@ export default function ContattiPage() {
                       id="message"
                       required
                       rows={5}
-                      className="w-full border border-neutral-300 px-4 py-3 text-sm focus:border-black focus:outline-none transition-colors resize-none"
+                      className="w-full border border-black/15 bg-white/50 px-4 py-3 text-sm focus:border-black focus:outline-none transition-colors resize-none"
                       placeholder="Raccontaci il tuo progetto..."
                     />
                   </div>
@@ -133,8 +134,7 @@ export default function ContattiPage() {
                 </ul>
               </div>
 
-              {/* Map placeholder */}
-              <div className="aspect-[4/3] bg-neutral-100 border border-neutral-200 flex items-center justify-center">
+              <div className="aspect-[4/3] bg-white/20 backdrop-blur-sm border border-black/10 flex items-center justify-center">
                 <div className="text-center text-neutral-400">
                   <MapPin size={32} className="mx-auto mb-2" />
                   <p className="text-sm">Milano, Italia</p>
