@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-marble-50: #fafafa;
+  --color-marble-100: #f5f5f5;
+  --color-marble-200: #e5e5e5;
+  --color-marble-300: #d4d4d4;
+  --color-marble-400: #a3a3a3;
+  --color-marble-500: #737373;
+  --color-marble-600: #525252;
+  --color-marble-700: #404040;
+  --color-marble-800: #262626;
+  --color-marble-900: #171717;
+  --color-marble-950: #0a0a0a;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Marble/light effect background */
+.bg-marble {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 200, 200, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(180, 180, 180, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(220, 220, 220, 0.25) 0%, transparent 50%),
+    linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #ebebeb 100%);
+}
+
+/* Dark marble variant */
+.bg-marble-dark {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(60, 60, 60, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(40, 40, 40, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(50, 50, 50, 0.35) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+}
+
+/* Light streak effects (like in layout) */
+.light-streak {
+  position: relative;
+  overflow: hidden;
+}
+
+.light-streak::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    rgba(255, 255, 255, 0.03) 60deg,
+    transparent 120deg,
+    rgba(255, 255, 255, 0.05) 180deg,
+    transparent 240deg,
+    rgba(255, 255, 255, 0.02) 300deg,
+    transparent 360deg
+  );
+  pointer-events: none;
+}
+
+/* Subtle border style matching layout */
+.border-subtle {
+  border-color: rgba(229, 229, 229, 0.5);
+}
+
+/* Selection color */
+::selection {
+  background: #000;
+  color: #fff;
+}
