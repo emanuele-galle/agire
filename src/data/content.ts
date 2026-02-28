@@ -18,15 +18,6 @@ export const navLinks = [
   { label: 'Contatti', href: '/contatti' },
 ]
 
-export const stats = [
-  { value: '6/7', label: 'Università Italiane' },
-  { value: '3', label: 'Regioni' },
-  { value: '100+', label: 'Brand Collaborazioni' },
-  { value: 'Milano', label: 'Headquarter' },
-]
-
-export const regions = ['Regione Lombardia', "Valle d'Aosta", 'Calabria']
-
 export const services = [
   {
     title: 'Branding',
@@ -88,13 +79,6 @@ export const projects = [
 ]
 
 export const universities = ['Verona', 'Vicenza', 'Padova', 'UMG', 'LUMSA']
-
-export const processSteps = [
-  { number: '01', title: 'Analisi', description: 'Studiamo il mercato, il target e i competitor per definire il punto di partenza.' },
-  { number: '02', title: 'Direzione', description: 'Definiamo la strategia e la direzione creativa per raggiungere gli obiettivi.' },
-  { number: '03', title: 'Produzione', description: 'Creiamo i contenuti e gli asset necessari per la campagna.' },
-  { number: '04', title: 'Distribuzione', description: 'Distribuiamo i contenuti sui canali più efficaci per il tuo target.' },
-]
 
 export const team = [
   { name: 'Andrea', role: 'Founder & Business Development', image: '/images/placeholder-team.jpg' },
