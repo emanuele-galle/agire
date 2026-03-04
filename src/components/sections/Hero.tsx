@@ -7,12 +7,12 @@ import { siteConfig } from '@/data/content'
 export function Hero() {
   return (
     <section className="min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center py-12 lg:py-20">
-      <div className="mx-auto max-w-5xl px-6 text-center">
+      <div className="w-full px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-[2.8rem] sm:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none"
+          className="text-[2.8rem] sm:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mx-auto"
         >
           AGIREEEEEEEE
         </motion.h1>
