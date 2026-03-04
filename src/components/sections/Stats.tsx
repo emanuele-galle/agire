@@ -49,40 +49,58 @@ export function Stats() {
               ))}
             </div>
 
-            {/* Italy map SVG */}
+            {/* Italy map SVG — 3 stelle: Milano, Aosta, Calabria */}
             <svg
-              width="80"
-              height="100"
-              viewBox="0 0 80 100"
+              width="90"
+              height="120"
+              viewBox="0 0 300 450"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="text-neutral-300 shrink-0"
+              className="shrink-0"
             >
+              {/* Italy outline */}
               <path
-                d="M35 5 L45 3 L52 8 L55 5 L60 8 L58 15 L62 18 L60 22 L55 20 L50 25 L52 30 L48 35 L50 40 L45 45 L48 50 L42 55 L45 60 L40 65 L42 70 L38 75 L35 72 L32 78 L28 82 L25 80 L22 85 L20 82 L22 78 L18 75 L20 70 L24 72 L28 68 L25 62 L30 58 L28 52 L32 48 L30 42 L34 38 L30 32 L35 28 L32 22 L35 18 L30 14 L33 10 L35 5Z"
-                stroke="currentColor"
-                strokeWidth="1.5"
+                d="M120 30 L140 25 L160 15 L185 20 L200 10 L220 15 L235 25 L240 40 L230 55 L220 50 L200 55 L195 70 L205 85 L195 100 L185 95 L175 105 L180 120 L175 135 L185 150 L178 165 L185 180 L175 195 L180 210 L170 225 L175 240 L165 255 L170 270 L160 285 L165 300 L155 315 L148 330 L140 340 L132 355 L125 365 L130 380 L120 390 L110 380 L105 365 L100 355 L95 340 L105 330 L110 315 L105 300 L95 285 L100 270 L110 260 L105 245 L95 230 L100 215 L110 205 L105 190 L95 175 L100 160 L110 150 L105 135 L95 120 L100 105 L110 95 L105 80 L95 65 L100 50 L110 40 L120 30Z"
+                stroke="#c0c0c0"
+                strokeWidth="2"
                 fill="none"
-                opacity="0.5"
               />
+              {/* Sicily */}
               <path
-                d="M25 85 L32 83 L38 86 L35 90 L28 92 L22 90 L25 85Z"
-                stroke="currentColor"
-                strokeWidth="1.5"
+                d="M100 395 L120 390 L140 395 L155 400 L150 415 L135 425 L115 420 L100 410 L100 395Z"
+                stroke="#c0c0c0"
+                strokeWidth="2"
                 fill="none"
-                opacity="0.5"
               />
+              {/* Sardinia */}
               <path
-                d="M12 55 L18 52 L22 55 L20 62 L15 65 L10 62 L12 55Z"
-                stroke="currentColor"
-                strokeWidth="1.5"
+                d="M45 220 L60 210 L75 215 L80 230 L75 250 L65 260 L50 255 L42 240 L45 220Z"
+                stroke="#c0c0c0"
+                strokeWidth="2"
                 fill="none"
-                opacity="0.5"
               />
-              {/* Region markers */}
-              <circle cx="38" cy="18" r="2.5" fill="#555" />
-              <circle cx="30" cy="10" r="2.5" fill="#555" />
-              <circle cx="35" cy="78" r="2.5" fill="#555" />
+
+              {/* Milano (HQ) */}
+              <g transform="translate(155, 72)">
+                <polygon
+                  points="0,-8 2.3,-2.5 8,-2.5 3.5,1.5 5.5,7.5 0,4 -5.5,7.5 -3.5,1.5 -8,-2.5 -2.3,-2.5"
+                  fill="#333"
+                />
+              </g>
+              {/* Aosta */}
+              <g transform="translate(118, 48)">
+                <polygon
+                  points="0,-7 2,-2 7,-2 3,1.2 4.5,6.2 0,3.3 -4.5,6.2 -3,1.2 -7,-2 -2,-2"
+                  fill="#333"
+                />
+              </g>
+              {/* Calabria (Catanzaro) */}
+              <g transform="translate(150, 340)">
+                <polygon
+                  points="0,-7 2,-2 7,-2 3,1.2 4.5,6.2 0,3.3 -4.5,6.2 -3,1.2 -7,-2 -2,-2"
+                  fill="#333"
+                />
+              </g>
             </svg>
           </motion.div>
         </div>
