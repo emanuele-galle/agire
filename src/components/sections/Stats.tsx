@@ -5,11 +5,10 @@ import { motion, useInView } from 'motion/react'
 
 const stats = [
   { value: '6/7', label: 'Università Italiane' },
-  { value: '+', label: 'Progetti Istituzionali' },
   { value: 'Milano', label: 'Headquarter' },
+  { value: '100+', label: 'Brand Gestiti' },
+  { value: '+', label: 'Progetti Istituzionali' },
 ]
-
-const clients = ['Wella', 'Timberland', 'Calabria Straordinaria', 'Regione Lombardia', 'Regione Calabria']
 
 /* Star positions — calibrated on the @svg-maps/italy viewBox (610x793) */
 const stars = [
@@ -41,25 +40,7 @@ export function Stats() {
             </motion.div>
           ))}
 
-          {/* Clienti */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="border border-black/15 bg-white/60 backdrop-blur-sm p-4 lg:p-5"
-          >
-            <div className="text-2xl lg:text-3xl font-bold tracking-tight leading-none">
-              100+
-            </div>
-            <div className="text-xs text-neutral-500 mt-1.5">Brand Gestiti</div>
-            <div className="mt-2 flex flex-wrap gap-1">
-              {clients.slice(0, 3).map((c) => (
-                <span key={c} className="text-[10px] text-neutral-400 bg-black/5 px-1.5 py-0.5">{c}</span>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* 3 Regioni + Italy map fused */}
+          {/* 3 Regioni + Italy map */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

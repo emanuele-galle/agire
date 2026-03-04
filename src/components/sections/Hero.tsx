@@ -6,7 +6,7 @@ import { siteConfig } from '@/data/content'
 
 export function Hero() {
   return (
-    <section className="pt-12 pb-14 lg:pt-20 lg:pb-24">
+    <section className="min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center py-12 lg:py-20">
       <div className="mx-auto max-w-5xl px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
