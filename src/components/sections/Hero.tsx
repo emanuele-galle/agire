@@ -6,13 +6,13 @@ import { siteConfig } from '@/data/content'
 
 export function Hero() {
   return (
-    <section className="pt-8 pb-12 lg:pt-16 lg:pb-20">
-      <div className="mx-auto max-w-4xl px-6 text-center">
+    <section className="pt-12 pb-14 lg:pt-20 lg:pb-24">
+      <div className="mx-auto max-w-5xl px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-[2.5rem] sm:text-7xl lg:text-9xl font-black tracking-tighter leading-none"
+          className="text-[2.8rem] sm:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none"
         >
           AGIREEEEEEEE
         </motion.h1>
@@ -20,7 +20,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          className="mt-6 text-xl sm:text-2xl lg:text-3xl tracking-wide text-neutral-700"
+          className="mt-6 text-2xl sm:text-3xl lg:text-4xl tracking-wide text-neutral-700"
         >
           {siteConfig.subtitle}
         </motion.p>
@@ -28,7 +28,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
-          className="mt-4 text-base sm:text-lg text-neutral-500 max-w-xl mx-auto"
+          className="mt-4 text-lg sm:text-xl text-neutral-500 max-w-2xl mx-auto"
         >
           {siteConfig.description}
         </motion.p>
@@ -36,17 +36,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
-          className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
             href="/contatti"
-            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium border border-black bg-black text-white hover:bg-neutral-800 transition-colors min-w-[200px]"
+            className="inline-flex items-center justify-center px-10 py-4 text-sm font-medium border border-black bg-black text-white hover:bg-neutral-800 transition-colors min-w-[220px]"
           >
             Prenota una Call
           </Link>
           <Link
             href="/progetti"
-            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium border border-black text-black hover:bg-black hover:text-white transition-colors min-w-[200px]"
+            className="inline-flex items-center justify-center px-10 py-4 text-sm font-medium border border-black text-black hover:bg-black hover:text-white transition-colors min-w-[220px]"
           >
             Scopri i Progetti
           </Link>

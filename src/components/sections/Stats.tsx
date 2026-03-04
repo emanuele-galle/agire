@@ -5,7 +5,6 @@ import { motion, useInView } from 'motion/react'
 
 const stats = [
   { value: '6/7', label: 'Università Italiane' },
-  { value: '3', label: 'Regioni' },
   { value: '+', label: 'Progetti Istituzionali' },
   { value: 'Milano', label: 'Headquarter' },
 ]
@@ -46,7 +45,7 @@ export function Stats() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="border border-black/15 bg-white/60 backdrop-blur-sm p-4 lg:p-5"
           >
             <div className="text-2xl lg:text-3xl font-bold tracking-tight leading-none">
@@ -60,15 +59,25 @@ export function Stats() {
             </div>
           </motion.div>
 
-          {/* Italy map with region markers */}
+          {/* 3 Regioni + Italy map fused */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="border border-black/15 bg-white/60 backdrop-blur-sm p-4 lg:p-5 overflow-visible relative flex items-center justify-center"
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="col-span-2 border border-black/15 bg-white/60 backdrop-blur-sm p-4 lg:p-5 overflow-visible relative flex items-center justify-between gap-4"
           >
-            {/* Italy map — oversized, spilling out of card for depth */}
-            <div className="relative w-[100px] h-[130px] sm:w-[120px] sm:h-[155px] lg:w-[140px] lg:h-[180px] -my-6 sm:-my-10 lg:-my-12">
+            <div>
+              <div className="text-2xl lg:text-3xl font-bold tracking-tight leading-none">3</div>
+              <div className="text-xs text-neutral-500 mt-1.5">Regioni</div>
+              <div className="mt-2 text-[10px] text-neutral-400 leading-relaxed space-y-0.5">
+                <div>Lombardia</div>
+                <div>Valle d&apos;Aosta</div>
+                <div>Calabria</div>
+              </div>
+            </div>
+
+            {/* Italy map — oversized, spilling out for depth */}
+            <div className="relative shrink-0 w-[100px] h-[130px] sm:w-[120px] sm:h-[155px] lg:w-[140px] lg:h-[180px] -my-6 sm:-my-10 lg:-my-12 -mr-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/italy-map.svg"
