@@ -2,29 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { navLinks } from '@/data/content'
-
-function AgireLogo({ size = 32 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Scalloped circle - cloud/flower shape */}
-      <path
-        d="M50 5 C56 5, 60 10, 62 14 C66 10, 72 8, 76 12 C80 16, 80 22, 78 26 C83 26, 88 30, 90 35 C92 40, 90 46, 87 49 C91 53, 93 58, 92 63 C91 68, 87 72, 83 73 C85 78, 84 83, 80 87 C76 91, 71 91, 67 89 C65 93, 60 96, 55 96 C50 96, 46 93, 44 90 C40 93, 35 94, 31 91 C27 88, 26 83, 27 79 C22 80, 18 77, 15 73 C12 69, 12 64, 14 60 C10 57, 8 52, 9 47 C10 42, 13 38, 17 36 C15 31, 16 26, 20 22 C24 18, 29 18, 33 20 C34 15, 38 10, 43 8 C46 6, 48 5, 50 5 Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        fill="none"
-      />
-    </svg>
-  )
-}
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -46,9 +27,15 @@ export function Navbar() {
       <nav className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-16 lg:h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <AgireLogo size={28} />
-            <span className="text-xl font-bold tracking-tight">AGIRE</span>
+          <Link href="/" className="shrink-0">
+            <Image
+              src="/images/logo-agire.jpg"
+              alt="AGIRE"
+              width={48}
+              height={48}
+              className="invert"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
