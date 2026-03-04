@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { projects, siteConfig } from '@/data/content'
 
@@ -26,7 +27,7 @@ export function Projects() {
             <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">Progetti</h2>
           </motion.div>
 
-          {/* Project cards */}
+          {/* Project cards with images */}
           {featured.map((project, i) => (
             <motion.div
               key={project.title}
@@ -36,10 +37,16 @@ export function Projects() {
             >
               <Link
                 href="/progetti"
-                className="group relative block aspect-[4/3] bg-neutral-800 overflow-hidden"
+                className="group relative block aspect-[4/3] overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent z-10" />
-                <div className="absolute inset-0 bg-neutral-700 group-hover:scale-105 transition-transform duration-500" />
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
                   <h3 className="text-base font-semibold text-white">{project.title}</h3>
                 </div>

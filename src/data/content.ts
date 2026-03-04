@@ -49,32 +49,32 @@ export const projects = [
   {
     title: 'Università Bocconi',
     category: 'Istituzionale',
-    image: '/images/placeholder-project.jpg',
+    image: '/images/project-bocconi.jpg',
   },
   {
     title: 'Regione Lombardia',
     category: 'Istituzionale',
-    image: '/images/placeholder-project.jpg',
+    image: '/images/project-lombardia.jpg',
   },
   {
     title: 'Campagna Brand',
     category: 'Branding',
-    image: '/images/placeholder-project.jpg',
+    image: '/images/project-brand.jpg',
   },
   {
     title: 'Wella',
     category: 'Content',
-    image: '/images/placeholder-project.jpg',
+    image: '/images/project-brand.jpg',
   },
   {
     title: 'Calabria Straordinaria',
     category: 'Istituzionale',
-    image: '/images/placeholder-project.jpg',
+    image: '/images/project-lombardia.jpg',
   },
   {
     title: 'Timberland',
     category: 'Social Media',
-    image: '/images/placeholder-project.jpg',
+    image: '/images/project-bocconi.jpg',
   },
 ]
 
