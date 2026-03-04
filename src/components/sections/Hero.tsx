@@ -12,7 +12,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter leading-none"
+          className="text-5xl sm:text-7xl lg:text-9xl font-black tracking-tighter leading-none"
         >
           AGIREEEEEEEE
         </motion.h1>

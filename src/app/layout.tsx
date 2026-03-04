@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AGIRE | Agenzia di Marketing',
     description: 'Strategia. Creatività. Azione.',
-    url: 'https://agire.fodivps2.cloud',
+    url: 'https://agireagency.com',
     siteName: 'AGIRE',
     locale: 'it_IT',
     type: 'website',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="it" className={inter.variable}>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased overflow-x-hidden">
         <div className="bg-marble-page">
           <div className="content-above">
             <Navbar />
