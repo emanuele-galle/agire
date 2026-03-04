@@ -16,7 +16,7 @@ const regions = ['Regione Lombardia', "Valle d'Aosta", 'Calabria']
 const stars = [
   { label: 'Milano', top: '14%', left: '28%' },
   { label: 'Aosta', top: '10%', left: '10%' },
-  { label: 'Calabria', top: '78%', left: '78%' },
+  { label: 'Calabria', top: '72%', left: '62%' },
 ]
 
 export function Stats() {
@@ -47,7 +47,7 @@ export function Stats() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="col-span-2 border border-black/15 bg-white/60 backdrop-blur-sm p-4 lg:p-5 flex items-center justify-between gap-4"
+            className="col-span-2 border border-black/15 bg-white/60 backdrop-blur-sm p-4 lg:p-5 flex items-center justify-between gap-4 overflow-visible relative"
           >
             <div className="text-xs text-neutral-500 leading-relaxed">
               {regions.map((r) => (
@@ -55,19 +55,19 @@ export function Stats() {
               ))}
             </div>
 
-            {/* Real Italy map with star markers */}
-            <div className="relative shrink-0 w-[70px] h-[90px]">
+            {/* Real Italy map — oversized, spilling out of card for depth */}
+            <div className="relative shrink-0 w-[140px] h-[180px] -my-12 -mr-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/italy-map.svg"
                 alt="Mappa Italia"
-                className="w-full h-full object-contain opacity-30"
+                className="w-full h-full object-contain opacity-20"
               />
               {/* Star markers */}
               {stars.map((star) => (
                 <span
                   key={star.label}
-                  className="absolute w-2.5 h-2.5 bg-black rounded-full border border-white"
+                  className="absolute w-3 h-3 bg-black rounded-full border-2 border-white shadow-sm"
                   style={{ top: star.top, left: star.left }}
                   title={star.label}
                 />
