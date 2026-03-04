@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'AGIRE',
   tagline: 'Non lanciamo i brand, li accompagniamo per la mano nel mercato',
-  subtitle: 'Strategia. Creatività. Azione.',
-  description: 'Costruiamo brand che si muovono. Trasformiamo visione in risultati concreti.',
+  subtitle: '+ 100 Brand hanno scelto di Agire',
+  description: 'Non lanciamo Brand, li accompagniamo per mano nel mercato.',
   instagram: '@agireagency',
   instagramUrl: 'https://instagram.com/agireagency',
   companyName: 'AGIRE S.R.L.',
