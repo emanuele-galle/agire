@@ -29,11 +29,10 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logo-agire.jpg"
+              src="/images/logo-agire-dark.png"
               alt="AGIRE"
-              width={48}
-              height={48}
-              className="invert"
+              width={64}
+              height={64}
               priority
             />
           </Link>
