@@ -14,12 +14,12 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik-public"
-      - "traefik.http.routers.agire-preview.rule=Host(`agire.fodivps2.cloud`)"
-      - "traefik.http.routers.agire-preview.entrypoints=websecure"
-      - "traefik.http.routers.agire-preview.tls=true"
-      - "traefik.http.routers.agire-preview.tls.certresolver=letsencrypt"
-      - "traefik.http.routers.agire-preview.middlewares=security-headers@file"
-      - "traefik.http.services.agire-preview.loadbalancer.server.port=3000"
+      - "traefik.http.routers.agire.rule=Host(`agireagency.com`) || Host(`www.agireagency.com`)"
+      - "traefik.http.routers.agire.entrypoints=websecure"
+      - "traefik.http.routers.agire.tls=true"
+      - "traefik.http.routers.agire.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.agire.middlewares=security-headers@file"
+      - "traefik.http.services.agire.loadbalancer.server.port=3000"
       - "com.docker.compose.project=agire"
       - "vps.project.slug=agire"
     healthcheck:
