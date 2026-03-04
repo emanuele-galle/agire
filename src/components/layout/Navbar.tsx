@@ -52,7 +52,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="/contatti"
-              className="hidden md:inline-flex items-center px-5 py-2 text-sm font-medium bg-neutral-900 text-white hover:bg-black transition-colors"
+              className="hidden md:inline-flex items-center px-5 py-2 text-sm font-medium border border-black text-black hover:bg-black hover:text-white transition-colors"
             >
               Prenota una Call
             </Link>
