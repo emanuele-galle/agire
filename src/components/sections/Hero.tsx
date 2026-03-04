@@ -12,9 +12,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-7xl sm:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none"
+          className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter leading-none"
         >
-          AGIRE.
+          AGIREEEEEEEE
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

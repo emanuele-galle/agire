@@ -6,7 +6,7 @@ export const siteConfig = {
   instagram: '@agireagency',
   instagramUrl: 'https://instagram.com/agireagency',
   companyName: 'AGIRE S.R.L.',
-  email: 'info@agireagency.it',
+  email: 'info@agireagency.com',
   pec: 'agireagency@pec.it',
   piva: '12265900964',
   phone: '+39 02 1234567',
