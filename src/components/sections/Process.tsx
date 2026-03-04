@@ -24,13 +24,13 @@ export function Process() {
           transition={{ duration: 0.5 }}
           className="flex flex-col lg:flex-row items-center justify-between gap-4"
         >
-          {/* Process steps - single line */}
-          <div className="flex items-center gap-2 text-sm">
+          {/* Process steps */}
+          <div className="grid grid-cols-2 sm:flex sm:items-center gap-x-4 gap-y-2 text-sm">
             {steps.map((step, i) => (
               <span key={step.num} className="flex items-center gap-2">
                 <span className="font-semibold">{step.num}</span>
                 <span className="text-neutral-600">{step.title}</span>
-                {i < steps.length - 1 && <span className="text-neutral-300 mx-1">—</span>}
+                {i < steps.length - 1 && <span className="text-neutral-300 mx-1 hidden sm:inline">—</span>}
               </span>
             ))}
           </div>

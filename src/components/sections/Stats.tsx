@@ -56,7 +56,7 @@ export function Stats() {
             </div>
 
             {/* Real Italy map — oversized, spilling out of card for depth */}
-            <div className="relative shrink-0 w-[140px] h-[180px] -my-12 -mr-2">
+            <div className="relative shrink-0 w-[100px] h-[130px] sm:w-[140px] sm:h-[180px] -my-8 sm:-my-12 -mr-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/italy-map.svg"

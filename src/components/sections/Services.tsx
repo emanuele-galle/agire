@@ -13,13 +13,13 @@ export function Services() {
   return (
     <section ref={ref} className="py-3">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3">
           {/* Label cell */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="border border-black/15 bg-white/60 backdrop-blur-sm p-4 lg:p-5 flex items-center"
+            className="col-span-2 sm:col-span-1 lg:col-span-1 border border-black/15 bg-white/60 backdrop-blur-sm p-4 lg:p-5 flex items-center"
           >
             <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">Servizi</h2>
           </motion.div>

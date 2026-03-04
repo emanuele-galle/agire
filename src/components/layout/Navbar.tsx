@@ -33,6 +33,7 @@ export function Navbar() {
               alt="AGIRE"
               width={64}
               height={64}
+              className="w-12 h-12 sm:w-16 sm:h-16"
               priority
             />
           </Link>
