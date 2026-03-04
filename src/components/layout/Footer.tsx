@@ -75,19 +75,40 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Legal info */}
+        <div className="mt-12 pt-6 border-t border-neutral-800 text-xs text-neutral-500 space-y-2">
+          <p>{siteConfig.companyName} — Sede legale: {siteConfig.address}</p>
+          <p>P.IVA: {siteConfig.piva} — PEC: {siteConfig.pec}</p>
+        </div>
+
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-neutral-500">
-            &copy; {new Date().getFullYear()} AGIRE. Tutti i diritti riservati.
-          </p>
-          <a
-            href={siteConfig.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-neutral-500 hover:text-white transition-colors"
-          >
-            Seguici su Instagram <ArrowUpRight size={12} />
-          </a>
+        <div className="mt-6 pt-6 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p className="text-xs text-neutral-500">
+              &copy; {new Date().getFullYear()} {siteConfig.companyName} Tutti i diritti riservati.
+            </p>
+            <div className="flex items-center gap-3 text-xs text-neutral-500">
+              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <span>|</span>
+              <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <a
+              href={siteConfig.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs text-neutral-500 hover:text-white transition-colors"
+            >
+              Seguici su Instagram <ArrowUpRight size={12} />
+            </a>
+            <span className="text-xs text-neutral-600">
+              Made by{' '}
+              <a href="https://fodisrl.it" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">
+                FODI S.R.L.
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </footer>

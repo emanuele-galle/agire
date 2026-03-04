@@ -5,9 +5,12 @@ export const siteConfig = {
   description: 'Costruiamo brand che si muovono. Trasformiamo visione in risultati concreti.',
   instagram: '@agireagency',
   instagramUrl: 'https://instagram.com/agireagency',
+  companyName: 'AGIRE S.R.L.',
   email: 'info@agireagency.it',
+  pec: 'agireagency@pec.it',
+  piva: '12265900964',
   phone: '+39 02 1234567',
-  address: 'Milano, Italia',
+  address: 'Via Morimondo 26, 20143 Milano (MI)',
 }
 
 export const navLinks = [
